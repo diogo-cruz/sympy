@@ -1753,6 +1753,12 @@ def _eval_stirling2(n, k):
         return S.One
     elif k == n - 1:
         return binomial(n, 2)
+    elif k == n - 2:
+        return (3*k+1) * binomial(n, 3) / 4
+    elif k == n - 3:
+        return binomial(k+1, 2) * binomial(n, 4)
+    elif k == n - 4:
+        pass
     elif k == 1:
         return S.One
     elif k == 2:
